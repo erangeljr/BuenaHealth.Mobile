@@ -69,6 +69,6 @@ Global
 		{E3955DD8-1FFE-4EB3-ADA6-E616C08A5CF6}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = BuenaHealth.Mobile\BuenaHealth.Mobile.csproj
+		StartupItem = Android\BuenaHealth.Mobile.Android.csproj
 	EndGlobalSection
 EndGlobal
