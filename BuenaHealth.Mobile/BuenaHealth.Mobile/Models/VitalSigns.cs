@@ -8,7 +8,8 @@ namespace BuenaHealth.Mobile.Models
 {
     public class VitalSigns
     {
-        private float Height { get; set; }
+        public int VitalSignId { get; set; }
+        public float Height { get; set; }
         public float Weight { get; set; }
         public int Systolic { get; set; }
         public int Diastolic { get; set; }
