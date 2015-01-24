@@ -9,7 +9,7 @@ namespace BuenaHealth.Mobile
 {
     public class App : Application
     {
-        public App()
+        public App(string displayText)
         {
             // The root page of your application
             MainPage = new ContentPage
@@ -20,7 +20,7 @@ namespace BuenaHealth.Mobile
                     Children = {
 						new Label {
 							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
+							Text = displayText
 						}
 					}
                 }

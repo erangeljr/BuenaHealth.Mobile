@@ -18,7 +18,8 @@ namespace BuenaHealth.Mobile.WinPhone
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new BuenaHealth.Mobile.App());
+            string dbPath = FileAccessHelper.GetLocalFilePath("buenahealth.db3");
+            LoadApplication(new BuenaHealth.Mobile.App(dbPath));
         }
     }
 }

@@ -8,8 +8,11 @@ namespace BuenaHealth.Mobile.WinPhone
 {
     public class FileAccessHelper
     {
-        public static string GetLocalFilePath()
+        public static string GetLocalFilePath(string fileName)
         {
+            string path = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
+
+            return path + fileName;
         }
     }
 }
