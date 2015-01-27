@@ -37,6 +37,7 @@
     <Compile Include="App.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Models\Demographics.cs" />
+    <Compile Include="Models\Humans.cs" />
     <Compile Include="Models\Notes.cs" />
     <Compile Include="Models\VitalSigns.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

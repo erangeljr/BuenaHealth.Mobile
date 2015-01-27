@@ -16,6 +16,5 @@ namespace BuenaHealth.Mobile.Models
         public string Sex { get; set; }
         public string Race { get; set; }
         public string Ethnicity { get; set; }
-        public DateTime DateOfBirth { get; set; }
     }
 }
