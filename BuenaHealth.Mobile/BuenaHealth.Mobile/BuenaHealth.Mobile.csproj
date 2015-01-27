@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
-    <Compile Include="Infrastructure\BuenaHealthRepository.cs" />
+    <Compile Include="Infrastructure\BuenaHealthBaseRepository.cs" />
     <Compile Include="Infrastructure\DemographicsRepository.cs" />
     <Compile Include="Infrastructure\HumanRespository.cs" />
     <Compile Include="Infrastructure\NotesRepository.cs" />
