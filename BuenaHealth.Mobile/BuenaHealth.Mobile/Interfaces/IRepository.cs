@@ -11,7 +11,6 @@ namespace BuenaHealth.Mobile.Interfaces
     {
         IQueryable<T> GetAll();
         IQueryable<T> Find(Expression<Func<T, bool>> predicate);
-        IQueryable<T> FindWithChildren(Expression<Func<T, bool>> predicate, string[] children);
         T Single(Expression<Func<T, bool>> predicate);
         T SingleOrDefault(Expression<Func<T, bool>> predicate);
         T First(Expression<Func<T, bool>> predicate);
