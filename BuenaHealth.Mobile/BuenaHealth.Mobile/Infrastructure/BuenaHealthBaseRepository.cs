@@ -16,7 +16,7 @@ namespace BuenaHealth.Mobile.Infrastructure
          private SQLiteConnection dbConn;
         
         public string StatusMessage { get; set; }
-        public BuenaHealthRepository(ISQLitePlatform sqlitePlatform, string dbPath)
+        public BuenaHealthBaseRepository(ISQLitePlatform sqlitePlatform, string dbPath)
         {
             //initialize a new SQLiteConnection 
             if (dbConn == null)
