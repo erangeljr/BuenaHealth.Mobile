@@ -6,11 +6,28 @@ using System.Text;
 using System.Threading.Tasks;
 using BuenaHealth.Mobile.Interfaces;
 using BuenaHealth.Mobile.Models;
+using SQLite.Net;
+using SQLite.Net.Interop;
 
 namespace BuenaHealth.Mobile.Infrastructure
 {
-    public class NotesRepository : IRepository<Notes>
+    public class NotesRepository: IRepository<Notes>
     {
+
+        private SQLiteConnection dbConn;
+        
+        public string StatusMessage { get; set; }
+        public NotesRepository(ISQLitePlatform sqlitePlatform, string dbPath)
+        {
+            //initialize a new SQLiteConnection 
+            if (dbConn == null)
+            {
+                dbConn = new SQLiteConnection(sqlitePlatform, dbPath);
+
+                //create the Person table
+                dbConn.CreateTable<Notes>();
+            }
+        }
         public IQueryable<Notes> GetAll()
         {
             throw new NotImplementedException();
