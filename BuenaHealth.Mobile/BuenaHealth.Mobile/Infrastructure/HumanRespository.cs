@@ -59,7 +59,26 @@ namespace BuenaHealth.Mobile.Infrastructure
 
         public void Add(Humans entity)
         {
-            throw new NotImplementedException();
+            int result = 0;
+            try
+            {
+                //basic validation to ensure a name was entered
+                if (entity == null)
+                    throw new ArgumentNullException("human entity");
+
+                //insert a new person into the Person table
+                result = dbConn.Insert(new Humans
+                {
+                    FirstName = entity.FirstName,
+                    LastName = entity.LastName,
+                    DateOfBirth = entity.DateOfBirth
+                });
+                StatusMessage = string.Format("{0} record(s) added [FirstName: {1})", result, entity.FirstName);
+            }
+            catch (Exception ex)
+            {
+                StatusMessage = string.Format("Failed to add {0}. Error: {1}", entity.FirstName, ex.Message);
+            }
         }
 
         public void Delete(Humans entity)
