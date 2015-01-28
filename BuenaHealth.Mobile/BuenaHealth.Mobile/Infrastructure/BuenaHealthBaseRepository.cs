@@ -28,7 +28,7 @@ namespace BuenaHealth.Mobile.Infrastructure
             }
         }
 
-        public IQueryable<T> GetAll()
+        public IList<T> GetAll()
         {
             throw new NotImplementedException();
         }

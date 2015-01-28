@@ -9,7 +9,7 @@ namespace BuenaHealth.Mobile.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        IQueryable<T> GetAll();
+        IList<T>GetAll();
         IQueryable<T> Find(Expression<Func<T, bool>> predicate);
         T Single(Expression<Func<T, bool>> predicate);
         T SingleOrDefault(Expression<Func<T, bool>> predicate);

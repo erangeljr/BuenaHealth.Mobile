@@ -27,9 +27,9 @@ namespace BuenaHealth.Mobile.Infrastructure
                 dbConn.CreateTable<Humans>();
             }
         }
-        public IQueryable<Humans> GetAll()
+        public IList<Humans> GetAll()
         {
-            throw new NotImplementedException();
+            return dbConn.Table<Humans>().ToList();
         }
 
         public IQueryable<Humans> Find(Expression<Func<Humans, bool>> predicate)
