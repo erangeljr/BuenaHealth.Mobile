@@ -82,5 +82,10 @@ namespace BuenaHealth.Mobile.Infrastructure
         {
             throw new NotImplementedException();
         }
+
+        IList<Notes> IRepository<Notes>.GetAll()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
