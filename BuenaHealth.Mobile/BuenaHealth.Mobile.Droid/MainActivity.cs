@@ -17,8 +17,7 @@ namespace BuenaHealth.Mobile.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            string dbPath = FileAccessHelper.GetLocalFilePath("buenahealth.db3");
-            LoadApplication(new App(dbPath));
+            LoadApplication(new App());
         }
     }
 }

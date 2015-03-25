@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US"/>
-  <App xmlns="" ProductID="{1e324a0d-0cad-4c46-b011-821b7132a9e5}" Title="BuenaHealth.Mobile.WinPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="BuenaHealth.Mobile.WinPhone author" Description="Sample description" Publisher="BuenaHealth.Mobile.WinPhone" PublisherID="{90edbec9-502a-4e69-88c3-5292b3962a86}">
+  <App xmlns="" ProductID="{b53d88d0-e6db-46d4-9a38-afd8ce1d6de6}" Title="BuenaHealth.Mobile.WinPhone" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="BuenaHealth.Mobile.WinPhone author" Description="Sample description" Publisher="BuenaHealth.Mobile.WinPhone" PublisherID="{19c70153-7119-469f-9a3a-edd83b3b6c64}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>

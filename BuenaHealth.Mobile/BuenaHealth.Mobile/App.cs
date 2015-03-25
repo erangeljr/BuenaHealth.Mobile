@@ -9,7 +9,7 @@ namespace BuenaHealth.Mobile
 {
     public class App : Application
     {
-        public App(string displayText)
+        public App()
         {
             // The root page of your application
             MainPage = new ContentPage
@@ -20,7 +20,7 @@ namespace BuenaHealth.Mobile
                     Children = {
 						new Label {
 							XAlign = TextAlignment.Center,
-							Text = displayText
+							Text = "Welcome to Buena Health Mobile!"
 						}
 					}
                 }

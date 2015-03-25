@@ -23,9 +23,9 @@
 	<key>MinimumOSVersion</key>
 	<string>6.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>EddieRangelComsBuenaHealthMobile</string>
+	<string>BuenaHealth.Mobile</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.eddierangel.buenahealth.mobile</string>
+	<string>net.buenahealth.mobile</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>
