@@ -40,7 +40,7 @@ namespace BuenaHealth.Mobile
             {
                 //basic validation to ensure a name was entered
                 if (string.IsNullOrEmpty(user.UserName))
-                    throw new Exception("Valid FirstName required");
+                    throw new Exception("Valid UserName required");
 
                 //insert a new person into the Person table
                 result = await dbConn.InsertAsync(new User
