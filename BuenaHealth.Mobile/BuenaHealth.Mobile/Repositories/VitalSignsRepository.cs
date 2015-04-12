@@ -34,7 +34,7 @@ namespace BuenaHealth.Mobile
             }
         }
 
-        public async Task AddNewUserAsync(VitalSign vitalSign)
+        public async Task AddNewVitalSignAsync(VitalSign vitalSign)
         {
             int result = 0;
             try
@@ -60,7 +60,7 @@ namespace BuenaHealth.Mobile
 
         }
 
-        public async Task<List<VitalSign>> GetAllUsersAsync()
+        public async Task<List<VitalSign>> GetAllVitalSignsAsync()
         {
             //return a list of people saved to the Person table in the database
             List<VitalSign> vitalSign = await dbConn.Table<VitalSign>().ToListAsync();

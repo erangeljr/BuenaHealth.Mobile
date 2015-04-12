@@ -38,9 +38,6 @@
     <Compile Include="Pages\DemographicPage.xaml.cs">
       <DependentUpon>DemographicPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\VitalSign.xaml.cs">
-      <DependentUpon>VitalSign.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Repositories\DemographicRepository.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -54,6 +51,9 @@
     </Compile>
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="Repositories\VitalSignsRepository.cs" />
+    <Compile Include="Pages\VitalSignPage.xaml.cs">
+      <DependentUpon>VitalSignPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite.Net">
@@ -91,7 +91,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\VitalSign.xaml">
+    <EmbeddedResource Include="Pages\VitalSignPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
