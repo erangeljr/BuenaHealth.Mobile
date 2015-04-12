@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BuenaHealth.Mobile;
 using SQLite.Net.Interop;
 using Xamarin.Forms;
 
@@ -9,19 +10,19 @@ namespace BuenaHealth.Mobile
 {
     public class App : Application
     {
-        public static UserRepository _userRepository { get; private set; }
-        public static VitalSignsRepository _vitalSignsRepository { get; private set; }
-        public static DemographicRepository _demographicRepository { get; private set; }
+        public static UserRepository userRepository { get; private set; }
+        public static VitalSignsRepository vitalSignsRepository { get; private set; }
+        public static DemographicRepository demographicRepository { get; private set; }
 
         public App(ISQLitePlatform sqlitePlatform, string dbPath)
         {
             //set database path first, then retrieve main page
-            _userRepository = new UserRepository(sqlitePlatform, dbPath);
-            _vitalSignsRepository = new VitalSignsRepository(sqlitePlatform, dbPath);
-            _demographicRepository = new DemographicRepository(sqlitePlatform, dbPath);
+           // userRepository = new UserRepository(sqlitePlatform, dbPath);
+            vitalSignsRepository = new VitalSignsRepository(sqlitePlatform, dbPath);
+            //demographicRepository = new DemographicRepository(sqlitePlatform, dbPath);
 
 
-            this.MainPage = new MainPage();
+            this.MainPage = new VitalSignPage();
         }
 
         protected override void OnStart()
