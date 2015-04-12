@@ -38,7 +38,7 @@
     <Compile Include="Pages\DemographicPage.xaml.cs">
       <DependentUpon>DemographicPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\DemographicRepository.cs" />
+    <Compile Include="Repositories\BuenaHealthRepository.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -49,8 +49,6 @@
     <Compile Include="Pages\UserPage.xaml.cs">
       <DependentUpon>UserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Repositories\VitalSignsRepository.cs" />
     <Compile Include="Pages\VitalSignPage.xaml.cs">
       <DependentUpon>VitalSignPage.xaml</DependentUpon>
     </Compile>

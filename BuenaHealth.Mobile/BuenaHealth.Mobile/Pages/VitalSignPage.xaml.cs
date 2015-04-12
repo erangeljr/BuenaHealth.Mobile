@@ -19,22 +19,29 @@ namespace BuenaHealth.Mobile
         public async void OnNewButtonClicked(object sender, EventArgs args)
         {
             statusMessage.Text = "";
-            var vitalSign = new VitalSign
+
+            var h = decimal.Parse(height.Text);
+            var w = decimal.Parse(weight.Text);
+            var s = int.Parse(systolic.Text);
+            var d = int.Parse(diastolic.Text);
+
+            VitalSign vitalSign;
+            vitalSign = new VitalSign
             {
-                Height = float.Parse(height.Text),
-                Weight = float.Parse(weight.Text),
-                Systolic = int.Parse(systolic.Text),
-                Diastolic = int.Parse(diastolic.Text)
+                Height = h,
+                Weight = w,
+                Systolic = s,
+                Diastolic = d
             };
-            await App.vitalSignsRepository.AddNewVitalSignAsync(vitalSign);
-            statusMessage.Text = App.userRepository.StatusMessage;
+            await App.buenaHealthRepository.AddNewVitalSignAsync(vitalSign);
+            statusMessage.Text = App.buenaHealthRepository.StatusMessage;
         }
 
         public async void OnGetButtonClicked(object sender, EventArgs args)
         {
             statusMessage.Text = "";
 
-            List<VitalSign> list = await BuenaHealth.Mobile.App.vitalSignsRepository.GetAllVitalSignsAsync();
+            List<VitalSign> list = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllVitalSignsAsync();
 
             ObservableCollection<VitalSign> collection = new ObservableCollection<VitalSign>(list);
             vitalSignList.ItemsSource = collection;

@@ -25,15 +25,15 @@ namespace BuenaHealth.Mobile
                 FirstName = "firstname",
                 LastName = "lastname"
             };
-            await App._userRepository.AddNewUserAsync(user);
-            statusMessage.Text = App._userRepository.StatusMessage;
+            await App.buenaHealthRepository.AddNewUserAsync(user);
+            statusMessage.Text = App.buenaHealthRepository.StatusMessage;
         }
 
         public async void OnGetButtonClicked(object sender, EventArgs args)
         {
             statusMessage.Text = "";
 
-            List<User> pplList = await App._userRepository.GetAllUsersAsync();
+            List<User> pplList = await App.buenaHealthRepository.GetAllUsersAsync();
 
             ObservableCollection<User> pplCollection = new ObservableCollection<User>(pplList);
             peopleList.ItemsSource = pplCollection;
