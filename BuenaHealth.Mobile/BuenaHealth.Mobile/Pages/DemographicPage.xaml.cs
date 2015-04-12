@@ -11,20 +11,40 @@ namespace BuenaHealth.Mobile
 {
     public partial class DemographicPage : ContentPage
     {
+        
         public DemographicPage()
         {
             InitializeComponent();
+            AddPickerData();
+        
+        }
+
+        private void AddPickerData()
+        {
+            ethnicityPicker.Items.Add(StringKeys.Mexican);
+            ethnicityPicker.Items.Add(StringKeys.Hispanic);
+            ethnicityPicker.Items.Add(StringKeys.NotHispanic);
+
+            racePicker.Items.Add(StringKeys.Asian);
+            racePicker.Items.Add(StringKeys.Black);
+            racePicker.Items.Add(StringKeys.Native);
+            racePicker.Items.Add(StringKeys.White);
+
+            languagePicker.Items.Add(StringKeys.English);
+            languagePicker.Items.Add(StringKeys.Spanish);
+
+            sexPicker.Items.Add(StringKeys.Male);
+            sexPicker.Items.Add(StringKeys.Female);
+            sexPicker.Items.Add(StringKeys.Transgender);
         }
         public async void OnNewButtonClicked(object sender, EventArgs args)
         {
             statusMessage.Text = "";
-            var user = new User
+            var demographic = new Demographic
             {
-                UserName = userName.Text,
-                FirstName = firstName.Text,
-                LastName = lastName.Text
+                Ethnicity = ethnicityPicker.Items[0]
             };
-            await App.buenaHealthRepository.AddNewUserAsync(user);
+            await App.buenaHealthRepository.AddNewDemographicAsync(demographic);
             statusMessage.Text = App.buenaHealthRepository.StatusMessage;
         }
 
@@ -32,10 +52,10 @@ namespace BuenaHealth.Mobile
         {
             statusMessage.Text = "";
 
-            List<User> list = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllUsersAsync();
+            List<Demographic> list = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllDemographicsAsync();
 
-            ObservableCollection<User> pplCollection = new ObservableCollection<User>(list);
-            peopleList.ItemsSource = pplCollection;
+            ObservableCollection<Demographic> collection = new ObservableCollection<Demographic>(list);
+            demographicList.ItemsSource = collection;
         }
     }
 }

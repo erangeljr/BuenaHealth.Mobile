@@ -98,18 +98,17 @@ namespace BuenaHealth.Mobile.Repositories
                 //insert a new person into the Person table
                 result = await dbConn.InsertAsync(new Demographic
                 {
-                    Name = demographic.Name,
                     BirthDate = demographic.BirthDate,
                     Language = demographic.Language,
                     Sex = demographic.Sex,
                     Race = demographic.Race,
                     Ethnicity = demographic.Ethnicity
                 });
-                StatusMessage = string.Format("{0} record(s) added [Demographic: {1})", result, demographic.Name);
+                StatusMessage = string.Format("{0} record(s) added [Demographic: {1})", result, demographic.Ethnicity);
             }
             catch (Exception ex)
             {
-                StatusMessage = string.Format("Failed to add {0}. Error: {1}", demographic.Name, ex.Message);
+                StatusMessage = string.Format("Failed to add {0}. Error: {1}", demographic.Ethnicity, ex.Message);
             }
 
         }

@@ -9,9 +9,12 @@
 </ContentPage.Padding>
   <Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Default">
     <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" /> <!--UserName-->
-      <RowDefinition Height="Auto" /> <!--First Name-->
-      <RowDefinition Height="Auto" /> <!--Last Name-->
+      <RowDefinition Height="Auto" /> <!--0 Create Label-->
+      <RowDefinition Height="Auto" /> <!--1 Ethnicity-->
+      <RowDefinition Height="Auto" /> <!--2 Race-->
+      <RowDefinition Height="Auto" /> <!--3 Language-->
+      <RowDefinition Height="Auto" /> <!--4 DoB-->
+      <RowDefinition Height="Auto" /> <!--2 Race-->
       <RowDefinition Height="Auto" /> <!--Add Person-->
       <RowDefinition Height="Auto" /> <!--Status Message-->
       <RowDefinition Height="Auto" /> <!--Get All-->
@@ -20,38 +23,54 @@
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
-    <Entry x:Name="userName"
-           Placeholder="User Name"
-           Grid.Row ="0"
-           />
-    <Entry x:Name="firstName"
-       Placeholder="First Name"
-       Grid.Row ="1"
-           />
-    <Entry x:Name="lastName"
-       Placeholder="Last Name"
-       Grid.Row ="2"
-           />
+    <Label x:Name="createLabel"
+        Text ="Create Demographics"
+        TextColor = "Gray"
+        HorizontalOptions="Center"
+        Grid.Row="0" />
+    <Picker  x:Name="ethnicityPicker"
+      Grid.Row="1"
+      />
+    <Picker  x:Name="racePicker"
+      Grid.Row="2"
+      />
+    <Picker  x:Name="languagePicker"
+      Grid.Row="3"
+      />
+    <Picker  x:Name="sexPicker"
+      Grid.Row="4"
+      />
+    <DatePicker x:Name="dateOfBirthPicker"
+       Grid.Row="5"
+      />
 
-    <Button Text="Add Person"
-            Grid.Row="3"
+    <Button Text="Add Demographics"
+            Grid.Row="6"
             Clicked="OnNewButtonClicked" />
 
     <Label x:Name="statusMessage"
-           Grid.Row="4" />
+           Grid.Row="7" />
 
-    <Button Text="Get All People"
-            Grid.Row="5"
+    <Button Text="Get All"
+            Grid.Row="8"
             Clicked="OnGetButtonClicked" />
 
-    <ListView x:Name="peopleList"
-              Grid.Row="6">
+    <ListView x:Name="demographicList"
+              Grid.Row="9">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell Height="30">
             <StackLayout Padding="5">
               <Label
-                Text="{Binding UserName}" />
+                Text="{Binding Ethnicity}" />
+              <Label
+                Text="{Binding Race}" />
+              <Label
+                Text="{Binding Language}" />
+              <Label
+                Text="{Binding Sex}" />
+              <Label
+                Text="{Binding BirthDate}" />
             </StackLayout>
           </ViewCell>
         </DataTemplate>
