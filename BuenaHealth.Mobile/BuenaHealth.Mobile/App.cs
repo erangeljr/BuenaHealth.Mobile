@@ -20,7 +20,7 @@ namespace BuenaHealth.Mobile
             _vitalSignsRepository = new VitalSignsRepository(sqlitePlatform, dbPath);
             _demographicRepository = new DemographicRepository(sqlitePlatform, dbPath);
 
-            return new UserPage();
+            return new MainPage();
         }
 
         protected override void OnStart()
