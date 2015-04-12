@@ -24,7 +24,7 @@ namespace BuenaHealth.Mobile.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            string dbPath = FileAccessHelper.GetLocalFilePath("people.db3");
+            string dbPath = FileAccessHelper.GetLocalFilePath("buenahealth.db3");
 
             LoadApplication(new BuenaHealth.Mobile.App(new SQLitePlatformIOS(), dbPath));
 
