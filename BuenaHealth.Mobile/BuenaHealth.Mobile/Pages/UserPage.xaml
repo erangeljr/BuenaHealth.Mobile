@@ -1,6 +1,61 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BuenaHealth.Mobile.UserPage">
-	<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+             x:Class="BuenaHealth.Mobile.UserPage"
+             Title="Buena Health - Create User">
+<ContentPage.Padding>
+  <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0" />
+</ContentPage.Padding>
+  <Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Default">
+  <Grid.RowDefinitions>
+    <RowDefinition Height="Auto" /> <!--UserName-->
+    <RowDefinition Height="Auto" /> <!--First Name-->
+    <RowDefinition Height="Auto" /> <!--Last Name-->
+    <RowDefinition Height="Auto" /> <!--Add Person-->
+    <RowDefinition Height="Auto" /> <!--Status Message-->
+    <RowDefinition Height="Auto" /> <!--Get All-->
+    <RowDefinition Height="*" /> <!--List All-->
+  </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Entry x:Name="userName"
+           Placeholder="User Name" 
+           Grid.Row ="0"
+           />
+    <Entry x:Name="firstName"
+       Placeholder="First Name"
+       Grid.Row ="1"
+           />
+    <Entry x:Name="lastName"
+       Placeholder="Last Name"
+       Grid.Row ="2"
+           />
+
+    <Button Text="Add Person"
+            Grid.Row="3"
+            Clicked="OnNewButtonClicked" />
+
+    <Label x:Name="statusMessage"
+           Grid.Row="4" />
+
+    <Button Text="Get All People"
+            Grid.Row="5"
+            Clicked="OnGetButtonClicked" />
+
+    <ListView x:Name="peopleList"
+              Grid.Row="6">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell Height="30">
+            <StackLayout Padding="5">
+              <Label
+                Text="{Binding Name}" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+</Grid>
 </ContentPage>
