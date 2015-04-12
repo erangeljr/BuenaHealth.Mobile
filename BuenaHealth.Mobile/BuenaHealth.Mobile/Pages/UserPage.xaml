@@ -51,7 +51,7 @@
           <ViewCell Height="30">
             <StackLayout Padding="5">
               <Label
-                Text="{Binding Name}" />
+                Text="{Binding UserName}" />
             </StackLayout>
           </ViewCell>
         </DataTemplate>

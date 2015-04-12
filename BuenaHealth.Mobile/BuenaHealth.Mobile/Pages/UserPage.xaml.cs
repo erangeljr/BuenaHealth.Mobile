@@ -33,9 +33,9 @@ namespace BuenaHealth.Mobile
         {
             statusMessage.Text = "";
 
-            List<User> pplList = await App._userRepository.GetAllUsersAsync();
+            List<User> list = await BuenaHealth.Mobile.App._userRepository.GetAllUsersAsync();
 
-            ObservableCollection<User> pplCollection = new ObservableCollection<User>(pplList);
+            ObservableCollection<User> pplCollection = new ObservableCollection<User>(list);
             peopleList.ItemsSource = pplCollection;
         }
     }
