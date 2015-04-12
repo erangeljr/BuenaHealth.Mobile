@@ -7,7 +7,7 @@
   <OnPlatform x:TypeArguments="Thickness"
             iOS="0, 20, 0, 0" />
 </ContentPage.Padding>
-  <Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Default">
+<Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Default">
   <Grid.RowDefinitions>
     <RowDefinition Height="Auto" /> <!--UserName-->
     <RowDefinition Height="Auto" /> <!--First Name-->
