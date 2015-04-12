@@ -7,8 +7,8 @@ namespace BuenaHealth.Mobile.Models
     {
         [PrimaryKey, AutoIncrement]
         public int VitalSignId { get; set; }
-        public float Height { get; set; }
-        public float Weight { get; set; }
+        public decimal Height { get; set; }
+        public decimal Weight { get; set; }
         public int Systolic { get; set; }
         public int Diastolic { get; set; }
     }
