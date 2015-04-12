@@ -13,14 +13,15 @@ namespace BuenaHealth.Mobile
         public static VitalSignsRepository _vitalSignsRepository { get; private set; }
         public static DemographicRepository _demographicRepository { get; private set; }
 
-        public static Page GetMainPage(ISQLitePlatform sqlitePlatform, string dbPath)
+        public App(ISQLitePlatform sqlitePlatform, string dbPath)
         {
             //set database path first, then retrieve main page
             _userRepository = new UserRepository(sqlitePlatform, dbPath);
             _vitalSignsRepository = new VitalSignsRepository(sqlitePlatform, dbPath);
             _demographicRepository = new DemographicRepository(sqlitePlatform, dbPath);
 
-            return new MainPage();
+
+            this.MainPage = new MainPage();
         }
 
         protected override void OnStart()

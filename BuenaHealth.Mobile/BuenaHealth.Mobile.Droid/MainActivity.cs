@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using SQLite.Net.Platform.XamarinAndroid;
 
 namespace BuenaHealth.Mobile.Droid
 {
@@ -17,7 +18,8 @@ namespace BuenaHealth.Mobile.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            string dbPath = FileAccessHelper.GetLocalFilePath("buenahealth.db3");
+            LoadApplication(new BuenaHealth.Mobile.App(new SQLitePlatformAndroid(), dbPath));
         }
     }
 }

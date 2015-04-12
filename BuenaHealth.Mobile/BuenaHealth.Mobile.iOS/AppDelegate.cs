@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using SQLite.Net.Platform.XamarinIOS;
 using UIKit;
 
 namespace BuenaHealth.Mobile.iOS
@@ -23,7 +24,9 @@ namespace BuenaHealth.Mobile.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            string dbPath = FileAccessHelper.GetLocalFilePath("people.db3");
+
+            LoadApplication(new BuenaHealth.Mobile.App(new SQLitePlatformIOS(), dbPath));
 
             return base.FinishedLaunching(app, options);
         }

@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using SQLite.Net.Platform.WindowsPhone8;
 
 namespace BuenaHealth.Mobile.WinPhone
 {
@@ -17,8 +18,10 @@ namespace BuenaHealth.Mobile.WinPhone
             InitializeComponent();
             SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
 
-            global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new BuenaHealth.Mobile.App());
+            global::Xamarin.Forms.Forms.Init(); 
+            string dbPath = FileAccessHelper.GetLocalFilePath("buenahealth.db3");
+
+            LoadApplication(new BuenaHealth.Mobile.App(new SQLitePlatformWP8(),dbPath));
         }
     }
 }
