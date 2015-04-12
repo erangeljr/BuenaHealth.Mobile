@@ -9,15 +9,15 @@
   </ContentPage.Padding>
   <Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Default">
     <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" /> <!--Create Label-->
-      <RowDefinition Height="Auto" /> <!-- Height and Label-->
-      <RowDefinition Height="Auto" /> <!-- Weight and Label -->
-      <RowDefinition Height="Auto" /> <!-- Blood Pressure Label -->
-      <RowDefinition Height="Auto" /> <!-- Systolic and Diastolic -->
-      <RowDefinition Height="Auto" /> <!--Add Vital Sign -->
-      <RowDefinition Height="Auto" /> <!--Status Message-->
-      <RowDefinition Height="Auto" /> <!--Get All-->
-      <RowDefinition Height="*" /><!--List All-->
+      <RowDefinition Height="Auto" /> <!--0 Create Label-->
+      <RowDefinition Height="Auto" /> <!--1 Height and Label-->
+      <RowDefinition Height="Auto" /> <!--2 Weight and Label -->
+      <RowDefinition Height="Auto" /> <!--3 Blood Pressure Label -->
+      <RowDefinition Height="Auto" /> <!--4 Systolic and Diastolic -->
+      <RowDefinition Height="Auto" /> <!--5 Add Vital Sign -->
+      <RowDefinition Height="Auto" /> <!--6 Status Message-->
+      <RowDefinition Height="Auto" /> <!--7 Get All-->
+      <RowDefinition Height="*" /><!--8 List All-->
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
@@ -26,7 +26,8 @@
     <Label x:Name="createLabel"
       Text ="Create Vital Signs"
       TextColor = "Gray"
-      Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"/>
+      HorizontalOptions="Center"
+      Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
     <Label x:Name="heightLabel"
       Text ="Enter in Inches"
       TextColor = "Gray"
@@ -42,9 +43,9 @@
        Placeholder="Weight"
        Grid.Row ="2" Grid.Column="1"/>
     <Label x:Name="bloodPressureLabel"
-      Text ="Enter Blood Pressure ex. 180 / 20"
+      Text ="Enter Blood Pressure ex. 120 / 80"
       TextColor = "Gray"
-      Grid.Row="3" Grid.Column="0" Grid.RowSpan="2" />
+      Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
     <Entry x:Name="systolic"
        Placeholder="Systolic"
        Grid.Row ="4" Grid.Column="0"/>
@@ -52,18 +53,18 @@
         Placeholder="Diastolic"
         Grid.Row ="4" Grid.Column="1"/>
     <Button Text="Add Vital Signs"
-            Grid.Row="5" Grid.Column="0" Grid.RowSpan="2"
+            Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
             Clicked="OnNewButtonClicked" />
 
     <Label x:Name="statusMessage"
-           Grid.Row="6" Grid.Column="0" Grid.RowSpan="2" />
+           Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" />
 
     <Button Text="Get All Vital Signs"
-            Grid.Row="7" Grid.Column="0" Grid.RowSpan="2"
+            Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"
             Clicked="OnGetButtonClicked" />
 
     <ListView x:Name="vitalSignList"
-              Grid.Row="8" Grid.Column="0" Grid.RowSpan="2">
+              Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell Height="30">
