@@ -1,11 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-
-using Foundation;
-using UIKit;
 
 namespace BuenaHealth.Mobile.iOS
 {
