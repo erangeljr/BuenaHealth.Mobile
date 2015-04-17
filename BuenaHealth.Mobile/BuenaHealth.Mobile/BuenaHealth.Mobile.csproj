@@ -35,6 +35,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Menu\MenuCell.cs" />
+    <Compile Include="Menu\MenuItem.cs" />
+    <Compile Include="Menu\MenuItemListView.cs" />
+    <Compile Include="Menu\MenuListData.cs" />
+    <Compile Include="Menu\MenuPage.cs" />
     <Compile Include="Models\StringKeys.cs" />
     <Compile Include="Pages\DemographicPage.xaml.cs">
       <DependentUpon>DemographicPage.xaml</DependentUpon>
@@ -53,6 +58,7 @@
     <Compile Include="Pages\VitalSignPage.xaml.cs">
       <DependentUpon>VitalSignPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menu\RootPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite.Net">
