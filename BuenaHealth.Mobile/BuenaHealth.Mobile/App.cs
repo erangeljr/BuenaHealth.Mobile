@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BuenaHealth.Mobile;
-using BuenaHealth.Mobile.Repositories;
+﻿using BuenaHealth.Mobile.Repositories;
+using BuenaHealth.Mobile.Menu;
 using SQLite.Net.Interop;
 using Xamarin.Forms;
 
@@ -18,7 +14,7 @@ namespace BuenaHealth.Mobile
             //set database path first, then retrieve main page
             buenaHealthRepository = new BuenaHealthRepository(sqlitePlatform, dbPath);
           
-            this.MainPage = new VitalSignPage();
+            this.MainPage = new RootPage();
         }
 
         protected override void OnStart()
