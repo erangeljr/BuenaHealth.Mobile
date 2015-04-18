@@ -13,7 +13,7 @@ namespace BuenaHealth.Mobile.Menu
             ItemsSource = data;
             VerticalOptions = LayoutOptions.FillAndExpand;
             BackgroundColor = Color.Transparent;
-            //SeparatorVisibility = SeparatorVisibility.None;
+            SeparatorVisibility = SeparatorVisibility.None;
 
             var cell = new DataTemplate(typeof(MenuCell));
             cell.SetBinding(MenuCell.TextProperty, "Title");
