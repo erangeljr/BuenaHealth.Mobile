@@ -14,7 +14,7 @@
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <NuGetPackageImportStamp>49fc3677</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>013cf694</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,7 +37,7 @@
     <Compile Include="App.cs" />
     <Compile Include="Menu\MenuCell.cs" />
     <Compile Include="Menu\MenuItem.cs" />
-    <Compile Include="Menu\MenuItemListView.cs" />
+    <Compile Include="Menu\MenuListView.cs" />
     <Compile Include="Menu\MenuListData.cs" />
     <Compile Include="Menu\MenuPage.cs" />
     <Compile Include="Models\StringKeys.cs" />
@@ -75,7 +75,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\UserPage.xaml">

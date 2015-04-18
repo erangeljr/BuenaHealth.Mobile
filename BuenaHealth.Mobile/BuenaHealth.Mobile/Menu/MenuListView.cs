@@ -6,6 +6,7 @@ namespace BuenaHealth.Mobile.Menu
 {
     public class MenuListView : ListView
     {
+
         public MenuListView()
         {
             List<MenuItem> data = new MenuListData();
