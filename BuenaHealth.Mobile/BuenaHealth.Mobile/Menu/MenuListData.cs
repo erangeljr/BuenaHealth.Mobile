@@ -13,6 +13,13 @@ namespace BuenaHealth.Mobile.Menu
 
             this.Add(new MenuItem()
             {
+                Title = "Profile Summary",
+                IconSource = "opportunities.png",
+                TargetType = typeof(MainPage)
+            });
+
+            this.Add(new MenuItem()
+            {
                 Title = "User Profile",
                 IconSource = "profile.png",
                 TargetType = typeof(UserPage)
@@ -32,12 +39,6 @@ namespace BuenaHealth.Mobile.Menu
                 TargetType = typeof(VitalSignPage)
             });
 
-            this.Add(new MenuItem()
-            {
-                Title = "Opportunities",
-                IconSource = "opportunities.png",
-                TargetType = typeof(MainPage)
-            });
         }
     }
 }
