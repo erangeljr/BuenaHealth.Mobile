@@ -127,6 +127,7 @@
   <ItemGroup>
     <Content Include="Assets\demographics.png" />
     <Content Include="Assets\profile.png" />
+    <Content Include="Assets\settings.png" />
     <Content Include="Assets\user.png" />
     <Content Include="Assets\vitalsigns.png" />
     <Content Include="README_FIRST.txt" />

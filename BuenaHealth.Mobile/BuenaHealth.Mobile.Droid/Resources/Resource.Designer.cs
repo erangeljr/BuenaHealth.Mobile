@@ -56,7 +56,10 @@ namespace BuenaHealth.Mobile.Droid
 			public const int profile = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int vitalsigns = 2130837507;
+			public const int settings = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int vitalsigns = 2130837508;
 			
 			static Drawable()
 			{
