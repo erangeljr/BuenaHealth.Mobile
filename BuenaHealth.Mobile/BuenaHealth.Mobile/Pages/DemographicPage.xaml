@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BuenaHealth.Mobile.DemographicPage"
-             Title="Demographics">
+             Title="Create Demographics">
 <ContentPage.Padding>
   <OnPlatform x:TypeArguments="Thickness"
             iOS="0, 20, 0, 0" />
@@ -10,53 +10,83 @@
   <Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Default">
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" /> <!--0 Create Label-->
-      <RowDefinition Height="Auto" /> <!--1 Ethnicity-->
-      <RowDefinition Height="Auto" /> <!--2 Race-->
-      <RowDefinition Height="Auto" /> <!--3 Language-->
-      <RowDefinition Height="Auto" /> <!--4 DoB-->
-      <RowDefinition Height="Auto" /> <!--2 Race-->
-      <RowDefinition Height="Auto" /> <!--Add Person-->
-      <RowDefinition Height="Auto" /> <!--Status Message-->
-      <RowDefinition Height="Auto" /> <!--Get All-->
-      <RowDefinition Height="*" /> <!--List All-->
+      <RowDefinition Height="Auto" /> <!--1 Select Ethnicity-->
+      <RowDefinition Height="Auto" /> <!--2 Ethnicity-->
+      <RowDefinition Height="Auto" /> <!--3 Select Race-->
+      <RowDefinition Height="Auto" /> <!--4 Race-->
+      <RowDefinition Height="Auto" /> <!--5 Select Language-->
+      <RowDefinition Height="Auto" /> <!--6 Language-->
+      <RowDefinition Height="Auto" /> <!--7 Select DoB-->
+      <RowDefinition Height="Auto" /> <!--8 DoB-->
+      <RowDefinition Height="Auto" /> <!--9 Select Sex-->
+      <RowDefinition Height="Auto" /> <!--10 Sex-->
+      <RowDefinition Height="Auto" /> <!--11 Add Person-->
+      <RowDefinition Height="Auto" /> <!--12 Status Message-->
+      <RowDefinition Height="Auto" /> <!--13 Get All-->
+      <RowDefinition Height="*" /> <!--14 List All-->
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
-    <Label x:Name="createLabel"
-        Text ="Create Demographics"
+    <Label x:Name="headerLabel"
+        Text =""
         TextColor = "Gray"
         HorizontalOptions="Center"
         Grid.Row="0" />
+    <Label x:Name="ethnicityLabel"
+      Text ="Select Ethnicity"
+      TextColor = "Gray"
+      HorizontalOptions="Start"
+      Grid.Row="1" />
     <Picker  x:Name="ethnicityPicker"
-      Grid.Row="1"
-      />
-    <Picker  x:Name="racePicker"
       Grid.Row="2"
       />
-    <Picker  x:Name="languagePicker"
-      Grid.Row="3"
-      />
-    <Picker  x:Name="sexPicker"
+    <Label x:Name="raceLabel"
+    Text ="Select Race"
+    TextColor = "Gray"
+    HorizontalOptions="Start"
+    Grid.Row="3" />
+    <Picker  x:Name="racePicker"
       Grid.Row="4"
       />
+    <Label x:Name="languageLabel"
+    Text ="Select Language"
+    TextColor = "Gray"
+    HorizontalOptions="Start"
+    Grid.Row="5" />
+    <Picker  x:Name="languagePicker"
+      Grid.Row="6"
+      />
+     <Label x:Name="sexLabel"
+      Text ="Select Sex"
+      TextColor = "Gray"
+      HorizontalOptions="Start"
+      Grid.Row="7" />
+    <Picker  x:Name="sexPicker"
+      Grid.Row="8"
+      />
+    <Label x:Name="dobLabel"
+    Text ="Select Date of Birth"
+    TextColor = "Gray"
+    HorizontalOptions="Start"
+    Grid.Row="9" />
     <DatePicker x:Name="dateOfBirthPicker"
-       Grid.Row="5"
+       Grid.Row="10"
       />
 
     <Button Text="Add Demographics"
-            Grid.Row="6"
+            Grid.Row="11"
             Clicked="OnNewButtonClicked" />
 
     <Label x:Name="statusMessage"
-           Grid.Row="7" />
+           Grid.Row="12" />
 
     <Button Text="Get All"
-            Grid.Row="8"
+            Grid.Row="13"
             Clicked="OnGetButtonClicked" />
 
     <ListView x:Name="demographicList"
-              Grid.Row="9">
+              Grid.Row="14">
       <ListView.ItemTemplate>
         <DataTemplate>
           <ViewCell Height="30">
