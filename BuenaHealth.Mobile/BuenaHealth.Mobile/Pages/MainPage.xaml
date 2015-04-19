@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BuenaHealth.Mobile.MainPage"
-             Title="Profile Summary">
+             Title="Buena Health">
     <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness"
                 iOS="0, 20, 0, 0" />
@@ -10,8 +10,8 @@
   <Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Default">
 
     <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" /> <!-- Welcome -->
+      <RowDefinition Height="Auto" /> <!-- FirstName -->
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="*" />
@@ -19,32 +19,18 @@
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
-    <Entry x:Name="newPerson"
-           Placeholder="Enter name" />
-
-    <Button Text="Add Person"
-            Grid.Row="1"
-            Clicked="OnNewButtonClicked" />
-
+    <Label x:Name="welcomeMessage"
+           Text ="Welcome to Buena Health"
+           Grid.Row="0" />
+       <Label x:Name="firstNameMessage"
+           Text ="Please fill out User Profile"
+           Grid.Row="1" />
     <Label x:Name="statusMessage"
            Grid.Row="2" />
 
     <Button Text="Get All People"
-            Grid.Row="3"
-            Clicked="OnGetButtonClicked" />
+            Grid.Row="3" />
 
-    <ListView x:Name="peopleList"
-              Grid.Row="4">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell Height="30">
-            <StackLayout Padding="5">
-              <Label
-                Text="{Binding Name}" />
-            </StackLayout>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
+   
   </Grid>
 </ContentPage>
