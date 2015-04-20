@@ -11,12 +11,41 @@ namespace BuenaHealth.Mobile
 {
     public partial class DemographicPage : ContentPage
     {
+        private string _ethnicity;
+        private string _race;
+        private string _language;
+        private string _sex;
+        private DateTime _birthDate;
         
         public DemographicPage()
         {
             InitializeComponent();
             AddPickerData();
-        
+
+            ethnicityPicker.SelectedIndexChanged += (sender, args) =>
+            {
+                _ethnicity = ethnicityPicker.Items[ethnicityPicker.SelectedIndex];
+            };
+
+            racePicker.SelectedIndexChanged += (sender, args) =>
+            {
+                _race = racePicker.Items[racePicker.SelectedIndex];
+            };
+
+            languagePicker.SelectedIndexChanged += (sender, args) =>
+            {
+                _language = languagePicker.Items[languagePicker.SelectedIndex];
+            };
+
+            sexPicker.SelectedIndexChanged += (sender, args) =>
+            {
+                _sex = sexPicker.Items[sexPicker.SelectedIndex];
+            };
+
+            dateOfBirthPicker.DateSelected += (sender, args) =>
+            {
+                _birthDate = dateOfBirthPicker.Date;
+            };
         }
 
         private void AddPickerData()
@@ -37,12 +66,20 @@ namespace BuenaHealth.Mobile
             sexPicker.Items.Add(StringKeys.Female);
             sexPicker.Items.Add(StringKeys.Transgender);
         }
+
+      
+
         public async void OnNewButtonClicked(object sender, EventArgs args)
         {
             statusMessage.Text = "";
             var demographic = new Demographic
             {
-                Ethnicity = ethnicityPicker.Items[0]
+                Ethnicity = _ethnicity,
+                Race = _race,
+                Language = _language,
+                Sex = _sex,
+                BirthDate = _birthDate
+
             };
             await App.buenaHealthRepository.AddNewDemographicAsync(demographic);
             statusMessage.Text = App.buenaHealthRepository.StatusMessage;
