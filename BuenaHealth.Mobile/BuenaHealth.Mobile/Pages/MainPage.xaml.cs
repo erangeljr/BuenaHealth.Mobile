@@ -22,7 +22,7 @@ namespace BuenaHealth.Mobile
             var user = await App.buenaHealthRepository.GetUser();
             if (user == null)
                 return;
-            firstNameMessage.Text = user.FirstName + "'s" + " " + "Profile";
+            firstNameMessage.Text = user.FirstName + " " + user.LastName + "'s" + " " + "Profile";
 
         }
 
