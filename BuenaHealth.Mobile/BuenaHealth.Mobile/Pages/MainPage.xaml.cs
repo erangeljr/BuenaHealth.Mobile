@@ -25,15 +25,23 @@ namespace BuenaHealth.Mobile
                 firstNameMessage.Text = user.FirstName + " " + user.LastName + "'s" + " " + "Profile";
 
             }
-            var demographic = await App.buenaHealthRepository.GetAllDemographicsAsync();
-            if (demographic == null)
+            List<Demographic> demographics = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllDemographicsAsync();
+
+            if (demographics != null)
             {
-                demographicMessage.Text = "";
+                demographicMessage.Text = "Demographics";
+                ObservableCollection<Demographic> collection = new ObservableCollection<Demographic>(demographics);
+                demographicList.ItemsSource = collection;
             }
-            var vitalSigns = await App.buenaHealthRepository.GetAllVitalSignsAsync();
-            if (vitalSigns == null)
+            List<VitalSign> vitalSigns = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllVitalSignsAsync();
+            if (vitalSigns != null)
             {
-                vitalSignsMessage.Text = " ";
+              
+                vitalSignsMessage.Text = "Vital Signs";
+                List<VitalSign> list = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllVitalSignsAsync();
+
+                ObservableCollection<VitalSign> collection = new ObservableCollection<VitalSign>(vitalSigns);
+                vitalSignList.ItemsSource = collection;
             }
 
         }

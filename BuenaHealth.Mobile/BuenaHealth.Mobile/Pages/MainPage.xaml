@@ -13,25 +13,129 @@
       <RowDefinition Height="Auto" /> <!-- Welcome -->
       <RowDefinition Height="Auto" /> <!-- FirstName -->
       <RowDefinition Height="Auto" /> <!-- Demographic -->
+      <RowDefinition Height="*" /> <!-- List Demographic-->
       <RowDefinition Height="Auto" /> <!-- Vital Signs-->
-      <RowDefinition Height="*" />
+      <RowDefinition Height="*" /> <!-- List Vital Signs-->
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
     <Label x:Name="welcomeMessage"
-           Text ="Welcome to Buena Health"
-           Grid.Row="0" />
+            Text ="Welcome to Buena Health"
+            TextColor = "Gray"
+            HorizontalOptions="Center"
+          Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
     <Label x:Name="firstNameMessage"
-           Text ="Please fill out User Profile"
-           Grid.Row="1" />
+            Text ="Please fill out User Profile"
+            TextColor = "Gray"
+            HorizontalOptions="Center"
+            Grid.Row="1"  Grid.Column="0" Grid.ColumnSpan="2"/>
     <Label x:Name="demographicMessage"
-           Text ="Please fill out Demographic Profile"
-           Grid.Row="2" />
+          Text ="Please fill out Demographic Profile"
+          TextColor = "Gray"  
+          HorizontalOptions="Center"
+          Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="2" />
+    <ListView x:Name="demographicList"
+                 Grid.Row="3"
+                 SeparatorVisibility="None">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell Height="30">
+            <StackLayout Padding="5">
+              <Label x:Name="ethnicityLabel"
+                Text ="Ethnicity:"
+                TextColor = "Gray"
+                HorizontalOptions="Start"
+                Grid.Column="0" />
+              <Label
+                TextColor = "Gray"
+                Text="{Binding Ethnicity}" Grid.Column="1"/>
+              <Label x:Name="raceLabel"
+               Text ="Race:"
+               TextColor = "Gray"
+               HorizontalOptions="Start"
+               Grid.Column="0" />
+              <Label
+                TextColor = "Gray"
+                Text="{Binding Race}"  Grid.Column="1" />
+              <Label x:Name="languageLabel"
+                Text ="Language:"
+                TextColor = "Gray"
+                HorizontalOptions="Start"
+                Grid.Column="0" />
+              <Label
+                TextColor = "Gray"
+                Text="{Binding Language}" Grid.Column="1" />
+              <Label x:Name="sexLabel"
+                 Text ="Sex:"
+                 TextColor = "Gray"
+                 HorizontalOptions="Start"
+                 Grid.Column="0" />
+              <Label
+                TextColor = "Gray"
+                Text="{Binding Sex}" Grid.Column="1" />
+              <Label x:Name="dobLabel"
+                 Text ="Birth Date:"
+                 TextColor = "Gray"
+                 HorizontalOptions="Start"
+                 Grid.Column="0" />
+              <Label
+                TextColor = "Gray"
+                Text="{Binding BirthDate}"  Grid.Column="1" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
     <Label x:Name="vitalSignsMessage"
-            Text = "Please fill out Vital Signs Profile"
-            Grid.Row="3" />
-
-   
+          Text = "Please fill out Vital Signs Profile"
+          TextColor = "Gray"
+          HorizontalOptions="Center"
+          Grid.Row="4" />
+    <ListView x:Name="vitalSignList"
+                  Grid.Row="5"
+               SeparatorVisibility="None">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell Height="30">
+            <StackLayout Padding="5">
+              <Label x:Name="heightLabel"
+               Text ="Height:"
+               TextColor = "Gray"
+               HorizontalOptions="Start"
+               Grid.Column="0" />
+              <Label
+                TextColor = "Gray"
+                Text="{Binding Height}" Grid.Column="1" />
+              <Label x:Name="weightLabel"
+                 Text ="Weight:"
+                 TextColor = "Gray"
+                 HorizontalOptions="Start"
+                 Grid.Column="0" />
+              <Label
+              TextColor = "Gray"
+              Text="{Binding Weight}"  Grid.Column="1"/>
+              <Label x:Name="systolicLabel"
+                Text ="Systolic:"
+                TextColor = "Gray"
+                HorizontalOptions="Start"
+                Grid.Column="0" />
+              <Label
+             TextColor = "Gray"
+             Text="{Binding Systolic}" Grid.Column="1"/>
+              <Label x:Name="diastolicLabel"
+                Text ="Diastolic:"
+                TextColor = "Gray"
+                HorizontalOptions="Start"
+                Grid.Column="0" />
+              <Label
+            TextColor = "Gray"
+            Text="{Binding Diastolic}"  Grid.Column="0" />
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
   </Grid>
 </ContentPage>
