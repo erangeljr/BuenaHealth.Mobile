@@ -92,7 +92,7 @@
           Text = "Please fill out Vital Signs Profile"
           TextColor = "Gray"
           HorizontalOptions="Center"
-          Grid.Row="4" />
+          Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
     <ListView x:Name="vitalSignList"
                   Grid.Row="5"
                SeparatorVisibility="None">
