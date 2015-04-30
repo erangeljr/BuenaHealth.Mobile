@@ -23,6 +23,7 @@
     <JavaMaximumHeapSize />
     <JavaOptions />
     <NuGetPackageImportStamp>0ca60550</NuGetPackageImportStamp>
+    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -102,6 +103,7 @@
     <AndroidResource Include="Resources\drawable\demographics.png" />
     <AndroidResource Include="Resources\drawable\profile.png" />
     <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\drawable\account.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BuenaHealth.Mobile\BuenaHealth.Mobile.csproj">

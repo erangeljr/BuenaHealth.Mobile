@@ -10,7 +10,7 @@ using SQLite.Net.Platform.XamarinAndroid;
 
 namespace BuenaHealth.Mobile.Droid
 {
-    [Activity(Label = "BuenaHealth.Mobile", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "BuenaHealth.Mobile", /*Icon = "@drawable/icon",*/ MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
