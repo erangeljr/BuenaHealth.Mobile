@@ -133,5 +133,11 @@ namespace BuenaHealth.Mobile.Repositories
             List<User> user = await dbConn.Table<User>().ToListAsync();
             return user;
         }
+
+        public async Task<User> GetUser()
+        {
+            var user = await dbConn.Table<User>().FirstOrDefaultAsync();
+            return user;
+        }
     }
 }
