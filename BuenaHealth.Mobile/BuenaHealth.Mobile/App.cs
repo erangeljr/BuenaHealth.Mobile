@@ -1,16 +1,6 @@
-<<<<<<< HEAD
 ﻿using BuenaHealth.Mobile.Repositories;
 using BuenaHealth.Mobile.Menu;
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using BuenaHealth.Mobile;
-using BuenaHealth.Mobile.Menu;
-using BuenaHealth.Mobile.Repositories;
->>>>>>> origin/master
-using SQLite.Net.Interop;
+﻿using SQLite.Net.Interop;
 using Xamarin.Forms;
 
 namespace BuenaHealth.Mobile
