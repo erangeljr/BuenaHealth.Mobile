@@ -37,14 +37,5 @@ namespace BuenaHealth.Mobile
             statusMessage.Text = App.buenaHealthRepository.StatusMessage;
         }
 
-        public async void OnGetButtonClicked(object sender, EventArgs args)
-        {
-            statusMessage.Text = "";
-
-            List<VitalSign> list = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllVitalSignsAsync();
-
-            ObservableCollection<VitalSign> collection = new ObservableCollection<VitalSign>(list);
-            vitalSignList.ItemsSource = collection;
-        }
     }
 }

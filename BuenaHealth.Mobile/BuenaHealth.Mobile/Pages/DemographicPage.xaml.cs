@@ -85,14 +85,5 @@ namespace BuenaHealth.Mobile
             statusMessage.Text = App.buenaHealthRepository.StatusMessage;
         }
 
-        public async void OnGetButtonClicked(object sender, EventArgs args)
-        {
-            statusMessage.Text = "";
-
-            List<Demographic> list = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllDemographicsAsync();
-
-            ObservableCollection<Demographic> collection = new ObservableCollection<Demographic>(list);
-            demographicList.ItemsSource = collection;
-        }
     }
 }

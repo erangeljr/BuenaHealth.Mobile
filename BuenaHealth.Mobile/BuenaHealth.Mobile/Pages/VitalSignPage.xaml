@@ -16,8 +16,6 @@
       <RowDefinition Height="Auto" /> <!--4 Systolic and Diastolic -->
       <RowDefinition Height="Auto" /> <!--5 Add Vital Sign -->
       <RowDefinition Height="Auto" /> <!--6 Status Message-->
-      <RowDefinition Height="Auto" /> <!--7 Get All-->
-      <RowDefinition Height="*" /><!--8 List All-->
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
@@ -58,29 +56,5 @@
 
     <Label x:Name="statusMessage"
            Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" />
-
-    <Button Text="Get All Vital Signs"
-            Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2"
-            Clicked="OnGetButtonClicked" />
-
-    <ListView x:Name="vitalSignList"
-              Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell Height="30">
-            <StackLayout Padding="5">
-              <Label
-                Text="{Binding Height}" />
-              <Label
-             Text="{Binding Weight}" />
-              <Label
-             Text="{Binding Systolic}" />
-              <Label
-             Text="{Binding Diastolic}" />
-            </StackLayout>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
   </Grid>
 </ContentPage>

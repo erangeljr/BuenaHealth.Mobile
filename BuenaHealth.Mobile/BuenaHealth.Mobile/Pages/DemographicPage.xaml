@@ -22,8 +22,6 @@
       <RowDefinition Height="Auto" /> <!--10 Sex-->
       <RowDefinition Height="Auto" /> <!--11 Add Person-->
       <RowDefinition Height="Auto" /> <!--12 Status Message-->
-      <RowDefinition Height="Auto" /> <!--13 Get All-->
-      <RowDefinition Height="*" /> <!--14 List All-->
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
@@ -80,31 +78,5 @@
 
     <Label x:Name="statusMessage"
            Grid.Row="12" />
-
-    <Button Text="Get All"
-            Grid.Row="13"
-            Clicked="OnGetButtonClicked" />
-
-    <ListView x:Name="demographicList"
-              Grid.Row="14">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell Height="30">
-            <StackLayout Padding="5">
-              <Label
-                Text="{Binding Ethnicity}" />
-              <Label
-                Text="{Binding Race}" />
-              <Label
-                Text="{Binding Language}" />
-              <Label
-                Text="{Binding Sex}" />
-              <Label
-                Text="{Binding BirthDate}" />
-            </StackLayout>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
   </Grid>
 </ContentPage>

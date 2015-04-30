@@ -14,8 +14,6 @@
     <RowDefinition Height="Auto" /> <!--Last Name-->
     <RowDefinition Height="Auto" /> <!--Add Person-->
     <RowDefinition Height="Auto" /> <!--Status Message-->
-    <RowDefinition Height="Auto" /> <!--Get All-->
-    <RowDefinition Height="*" /> <!--List All-->
   </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="*" />
@@ -39,23 +37,5 @@
 
     <Label x:Name="statusMessage"
            Grid.Row="4" />
-
-    <Button Text="Get All People"
-            Grid.Row="5"
-            Clicked="OnGetButtonClicked" />
-
-    <ListView x:Name="peopleList"
-              Grid.Row="6">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <ViewCell Height="30">
-            <StackLayout Padding="5">
-              <Label
-                Text="{Binding UserName}" />
-            </StackLayout>
-          </ViewCell>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
 </Grid>
 </ContentPage>
