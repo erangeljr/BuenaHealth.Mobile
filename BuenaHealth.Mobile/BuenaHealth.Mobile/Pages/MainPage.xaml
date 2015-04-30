@@ -12,8 +12,8 @@
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" /> <!-- Welcome -->
       <RowDefinition Height="Auto" /> <!-- FirstName -->
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" /> <!-- Demographic -->
+      <RowDefinition Height="Auto" /> <!-- Vital Signs-->
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
@@ -22,13 +22,14 @@
     <Label x:Name="welcomeMessage"
            Text ="Welcome to Buena Health"
            Grid.Row="0" />
-       <Label x:Name="firstNameMessage"
+    <Label x:Name="firstNameMessage"
            Text ="Please fill out User Profile"
            Grid.Row="1" />
-    <Label x:Name="statusMessage"
+    <Label x:Name="demographicMessage"
+           Text ="Please fill out Demographic Profile"
            Grid.Row="2" />
-
-    <Button Text="Get All People"
+    <Label x:Name="vitalSignsMessage"
+            Text = "Please fill out Vital Signs Profile"
             Grid.Row="3" />
 
    

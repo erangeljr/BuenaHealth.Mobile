@@ -20,9 +20,21 @@ namespace BuenaHealth.Mobile
         private async void GetUserDetail()
         {
             var user = await App.buenaHealthRepository.GetUser();
-            if (user == null)
-                return;
-            firstNameMessage.Text = user.FirstName + " " + user.LastName + "'s" + " " + "Profile";
+            if (user != null)
+            {
+                firstNameMessage.Text = user.FirstName + " " + user.LastName + "'s" + " " + "Profile";
+
+            }
+            var demographic = await App.buenaHealthRepository.GetAllDemographicsAsync();
+            if (demographic == null)
+            {
+                demographicMessage.Text = "";
+            }
+            var vitalSigns = await App.buenaHealthRepository.GetAllVitalSignsAsync();
+            if (vitalSigns == null)
+            {
+                vitalSignsMessage.Text = " ";
+            }
 
         }
 
