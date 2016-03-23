@@ -20,16 +20,34 @@ namespace BuenaHealth.Mobile
         protected override void OnStart()
         {
             // Handle when your app starts
+			StartLogging();
         }
 
         protected override void OnSleep()
         {
             // Handle when your app sleeps
+			GoingToSleep();
         }
 
         protected override void OnResume()
         {
             // Handle when your app resumes
+			ResumeLogging();
         }
+
+		void StartLogging ()
+		{
+			//Startup up logging service
+		}
+
+		void GoingToSleep()
+		{
+			//Close/Stop stuff that need closing/stoping
+		}
+
+		void ResumeLogging()
+		{
+			
+		}
     }
 }
