@@ -6,16 +6,78 @@ using System.Text;
 using System.Threading.Tasks;
 using BuenaHealth.Mobile.Models;
 using Xamarin.Forms;
+using System.ComponentModel;
 
 namespace BuenaHealth.Mobile
 {
-    public partial class DemographicPage : ContentPage
+	public partial class DemographicPage : ContentPage, INotifyPropertyChanged 
     {
         private string _ethnicity;
         private string _race;
         private string _language;
         private string _sex;
         private DateTime _birthDate;
+
+		private DemographicViewModel viewModel;
+
+		public string Ethnicity
+		{
+			get { return _ethnicity; }
+			set
+			{
+				_ethnicity = value;
+				RaisePropertyChanged(nameof(_ethnicity));
+			}
+		}
+
+		public string Race
+		{
+			get { return _race; }
+			set
+			{
+				_race = value;
+				RaisePropertyChanged(nameof(_race));
+			}
+		}
+
+		public string Language
+		{
+			get { return _language; }
+			set
+			{
+				_language = value;
+				RaisePropertyChanged(nameof(_language));
+			}
+		}
+
+		public string Sex
+		{
+			get { return _sex; }
+			set
+			{
+				_sex = value;
+				RaisePropertyChanged(nameof(_sex));
+			}
+		}
+
+		public DateTime Birthdate
+		{
+			get { return _birthDate; }
+			set
+			{
+				_birthDate = value;
+				RaisePropertyChanged(nameof(_birthDate));
+			}
+		}
+
+		public event PropertyChangedEventHandler PropertyChanged;
+		protected void RaisePropertyChanged(string name)
+		{
+			if (PropertyChanged != null)
+			{
+				PropertyChanged(this, new PropertyChangedEventArgs(name));
+			}
+		}
         
         public DemographicPage()
         {
@@ -84,6 +146,8 @@ namespace BuenaHealth.Mobile
             await App.buenaHealthRepository.AddNewDemographicAsync(demographic);
             statusMessage.Text = App.buenaHealthRepository.StatusMessage;
         }
+
+
 
     }
 }

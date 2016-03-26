@@ -59,6 +59,8 @@
       <DependentUpon>VitalSignPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Menu\RootPage.cs" />
+    <Compile Include="Models\Ethnicity.cs" />
+    <Compile Include="ViewModels\DemographicViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -115,4 +117,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
 </Project>

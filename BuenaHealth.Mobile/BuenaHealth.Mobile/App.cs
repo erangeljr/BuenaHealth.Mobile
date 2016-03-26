@@ -47,7 +47,7 @@ namespace BuenaHealth.Mobile
 
 		void ResumeLogging()
 		{
-			
+			//fire it all backup 
 		}
     }
 }

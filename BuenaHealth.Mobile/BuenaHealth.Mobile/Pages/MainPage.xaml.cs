@@ -38,6 +38,8 @@ namespace BuenaHealth.Mobile
             {
               
                 vitalSignsMessage.Text = "Vital Signs";
+
+				//TODO What's going on with this list
                 List<VitalSign> list = await BuenaHealth.Mobile.App.buenaHealthRepository.GetAllVitalSignsAsync();
 
                 ObservableCollection<VitalSign> collection = new ObservableCollection<VitalSign>(vitalSigns);

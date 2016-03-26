@@ -1,12 +1,15 @@
 ﻿<Properties StartupItem="BuenaHealth.Mobile/BuenaHealth.Mobile.Droid/BuenaHealth.Mobile.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BuenaHealth.Mobile/BuenaHealth.Mobile/Pages/VitalSignPage.xaml.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 5 (Lollipop)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BuenaHealth.Mobile/BuenaHealth.Mobile/Menu/MenuCell.cs">
     <Files>
       <File FileName="BuenaHealth.Mobile/BuenaHealth.Mobile/Pages/MainPage.xaml" Line="1" Column="1" />
       <File FileName="BuenaHealth.Mobile/BuenaHealth.Mobile.iOS/AppDelegate.cs" Line="1" Column="1" />
       <File FileName="BuenaHealth.Mobile/BuenaHealth.Mobile/Menu/MenuCell.cs" Line="1" Column="1" />
       <File FileName="BuenaHealth.Mobile/BuenaHealth.Mobile/Pages/UserPage.xaml" Line="1" Column="1" />
       <File FileName="BuenaHealth.Mobile/BuenaHealth.Mobile/Pages/VitalSignPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="BuenaHealth.Mobile/BuenaHealth.Mobile/Menu/RootPage.cs" Line="1" Column="1" />
+      <File FileName="BuenaHealth.Mobile/BuenaHealth.Mobile/packages.config" Line="1" Column="1" />
+      <File FileName="BuenaHealth.Mobile/BuenaHealth.Mobile/App.cs" Line="50" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
