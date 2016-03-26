@@ -14,8 +14,17 @@ namespace BuenaHealth.Mobile.Repositories
     {
         private SQLiteAsyncConnection dbConn;
         
-        public string StatusMessage { get; set; }
+        /// <summary>
+        /// Gets or sets the status message.
+        /// </summary>
+        /// <value>The status message.</value>
+		public string StatusMessage { get; set; }
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="BuenaHealth.Mobile.Repositories.BuenaHealthRepository"/> class.
+		/// </summary>
+		/// <param name="sqlitePlatform">Sqlite platform.</param>
+		/// <param name="dbPath">Db path.</param>
         public BuenaHealthRepository(ISQLitePlatform sqlitePlatform, string dbPath)
         {
             //initialize a new SQLiteConnection 
@@ -34,7 +43,12 @@ namespace BuenaHealth.Mobile.Repositories
             }
         }
 
-        public async Task AddNewUserAsync(User user)
+        /// <summary>
+        /// Adds the new user async.
+        /// </summary>
+        /// <returns>The new user async.</returns>
+        /// <param name="user">User.</param>
+		public async Task AddNewUserAsync(User user)
         {
             int result = 0;
             try
@@ -59,7 +73,12 @@ namespace BuenaHealth.Mobile.Repositories
 
         }
 
-        public async Task AddNewVitalSignAsync(VitalSign vitalSign)
+        /// <summary>
+        /// Adds the new vital sign async.
+        /// </summary>
+        /// <returns>The new vital sign async.</returns>
+        /// <param name="vitalSign">Vital sign.</param>
+		public async Task AddNewVitalSignAsync(VitalSign vitalSign)
         {
             int result = 0;
             try
@@ -86,7 +105,12 @@ namespace BuenaHealth.Mobile.Repositories
 
         }
 
-        public async Task AddNewDemographicAsync(Demographic demographic)
+        /// <summary>
+        /// Adds the new demographic async.
+        /// </summary>
+        /// <returns>The new demographic async.</returns>
+        /// <param name="demographic">Demographic.</param>
+		public async Task AddNewDemographicAsync(Demographic demographic)
         {
             int result = 0;
             try
@@ -113,28 +137,44 @@ namespace BuenaHealth.Mobile.Repositories
 
         }
 
-        public async Task<List<Demographic>> GetAllDemographicsAsync()
+        /// <summary>
+        /// Gets all demographics async.
+        /// </summary>
+        /// <returns>The all demographics async.</returns>
+		public async Task<List<Demographic>> GetAllDemographicsAsync()
         {
             //return a list of people saved to the Person table in the database
             List<Demographic> demographic = await dbConn.Table<Demographic>().ToListAsync();
             return demographic;
         }
 
-        public async Task<List<VitalSign>> GetAllVitalSignsAsync()
+        /// <summary>
+        /// Gets all vital signs async.
+        /// </summary>
+        /// <returns>The all vital signs async.</returns>
+		public async Task<List<VitalSign>> GetAllVitalSignsAsync()
         {
             //return a list of people saved to the Person table in the database
             List<VitalSign> vitalSign = await dbConn.Table<VitalSign>().ToListAsync();
             return vitalSign;
         }
 
-        public async Task<List<User>> GetAllUsersAsync()
+        /// <summary>
+        /// Gets all users async.
+        /// </summary>
+        /// <returns>The all users async.</returns>
+		public async Task<List<User>> GetAllUsersAsync()
         {
             //return a list of people saved to the Person table in the database
             List<User> user = await dbConn.Table<User>().ToListAsync();
             return user;
         }
 
-        public async Task<User> GetUser()
+        /// <summary>
+        /// Gets the user.
+        /// </summary>
+        /// <returns>The user.</returns>
+		public async Task<User> GetUser()
         {
             var user = await dbConn.Table<User>().FirstOrDefaultAsync();
             return user;

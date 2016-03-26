@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BuenaHealth.Mobile.SettingsPage"
+             Title="User Info">
+<ContentPage.Padding>
+  <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0" />
+</ContentPage.Padding>
+<Grid Padding="5" RowSpacing="1" ColumnSpacing="1" BackgroundColor="Default">
+  <Grid.RowDefinitions>
+    <RowDefinition Height="Auto" /> <!--UserName-->
+    <RowDefinition Height="Auto" /> <!--First Name-->
+    <RowDefinition Height="Auto" /> <!--Last Name-->
+    <RowDefinition Height="Auto" /> <!--Add Person-->
+    <RowDefinition Height="Auto" /> <!--Status Message-->
+  </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    <Entry x:Name="userName"
+           Placeholder="User Name" 
+           Grid.Row ="0"
+           />
+    <Entry x:Name="firstName"
+       Placeholder="First Name"
+       Grid.Row ="1"
+           />
+    <Entry x:Name="lastName"
+       Placeholder="Last Name"
+       Grid.Row ="2"
+           />
+
+    <Button Text="Add Person"
+            Grid.Row="3"
+            Clicked="OnNewButtonClicked" />
+
+    <Label x:Name="statusMessage"
+           Grid.Row="4" />
+</Grid>
+</ContentPage>

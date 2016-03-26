@@ -16,6 +16,9 @@ namespace BuenaHealth.Mobile
 		private string firstname;
 		private string lastname;
 
+		private UserProfileViewModel viewModel;
+
+
 		public string UserName
 		{
 			get { return username; }
@@ -48,6 +51,7 @@ namespace BuenaHealth.Mobile
 
         public UserPage()
         {
+			viewModel = new UserProfileViewModel ();
             InitializeComponent();
         }
 
@@ -63,15 +67,22 @@ namespace BuenaHealth.Mobile
         public async void OnNewButtonClicked(object sender, EventArgs args)
         {
             statusMessage.Text = "";
-            var user = new User
-            {
-                UserName = userName.Text,
-                FirstName = firstName.Text,
-                LastName = lastName.Text
-            };
-            await App.buenaHealthRepository.AddNewUserAsync(user);
-            statusMessage.Text = App.buenaHealthRepository.StatusMessage;
+			statusMessage.Text = await SaveUser ();
+           
         }
+
+		public async Task<string> SaveUser()
+		{
+			var model = new User
+			{
+				UserName = userName.Text,
+				FirstName = firstName.Text,
+				LastName = lastName.Text
+			};
+
+			return await viewModel.AddNewUserAsync(model);;
+			
+		}
 
     }
 }

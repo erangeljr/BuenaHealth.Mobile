@@ -39,6 +39,13 @@ namespace BuenaHealth.Mobile.Menu
                 TargetType = typeof(VitalSignPage)
             });
 
+			this.Add(new MenuItem()
+			{
+				Title = "Settings",
+				IconSource = "settings.png",
+				TargetType = typeof(SettingsPage)
+			});
+
         }
     }
 }
