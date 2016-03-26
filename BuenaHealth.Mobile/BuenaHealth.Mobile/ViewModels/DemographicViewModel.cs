@@ -10,7 +10,7 @@ namespace BuenaHealth.Mobile
 		{
 		}
 
-		public async Task<string> AddDemographic(Demographic model)
+		public async Task<string> AddNewDemographicAsync(Demographic model)
 		{
 			try
 			{

@@ -82,6 +82,7 @@ namespace BuenaHealth.Mobile
         public DemographicPage()
         {
             InitializeComponent();
+			viewModel = new DemographicViewModel ();
             AddPickerData();
 
             ethnicityPicker.SelectedIndexChanged += (sender, args) =>
@@ -133,19 +134,27 @@ namespace BuenaHealth.Mobile
 
         public async void OnNewButtonClicked(object sender, EventArgs args)
         {
-            statusMessage.Text = "";
-            var demographic = new Demographic
-            {
-                Ethnicity = _ethnicity,
-                Race = _race,
-                Language = _language,
-                Sex = _sex,
-                BirthDate = _birthDate
 
-            };
-            await App.buenaHealthRepository.AddNewDemographicAsync(demographic);
-            statusMessage.Text = App.buenaHealthRepository.StatusMessage;
+			statusMessage.Text = "";
+
+			statusMessage.Text = await SaveDemographic ();
         }
+
+		public async Task<String> SaveDemographic()
+		{
+			var model = new Demographic
+			{
+				Ethnicity = _ethnicity,
+				Race = _race,
+				Language = _language,
+				Sex = _sex,
+				BirthDate = _birthDate
+
+			};
+
+			return await viewModel.AddNewDemographicAsync(model);;
+			
+		}
 
 
 
