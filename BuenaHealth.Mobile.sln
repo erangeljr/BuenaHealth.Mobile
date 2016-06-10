@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Mobile.UWP", "BuenaHealth.Mobile.UWP\BuenaHealth.Mobile.UWP.csproj", "{637B60BC-2D0D-42C6-B0CD-2E475093812E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Mobile.Droid", "BuenaHealth.Mobile.Droid\BuenaHealth.Mobile.Droid.csproj", "{6144F296-B478-4EB9-BD01-AE00CDB8046B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FAB48E28-F1D4-40C7-888C-DA5A27C76CB7} = {FAB48E28-F1D4-40C7-888C-DA5A27C76CB7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuenaHealth.Mobile.iOS", "BuenaHealth.Mobile.iOS\BuenaHealth.Mobile.iOS.csproj", "{DD948B33-C104-499E-B078-332EDE8F51AE}"
 EndProject
