@@ -114,8 +114,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BuenaHealth.Mobile\BuenaHealth.Mobile.csproj">
+      <Project>{fab48e28-f1d4-40c7-888c-da5a27c76cb7}</Project>
       <Name>BuenaHealth.Mobile</Name>
-      <Project>{FAB48E28-F1D4-40C7-888C-DA5A27C76CB7}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -101,12 +101,6 @@
     <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BuenaHealth.Mobile\BuenaHealth.Mobile.csproj">
-      <Name>BuenaHealth.Mobile</Name>
-      <Project>{FAB48E28-F1D4-40C7-888C-DA5A27C76CB7}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Default-Portrait.png" />
     <BundleResource Include="Resources\Default-Portrait%402x.png" />
