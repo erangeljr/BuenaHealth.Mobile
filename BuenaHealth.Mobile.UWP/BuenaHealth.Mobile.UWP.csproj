@@ -126,12 +126,6 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BuenaHealth.Mobile\BuenaHealth.Mobile\BuenaHealth.Mobile.csproj">
-      <Project>{fab48e28-f1d4-40c7-888c-da5a27c76cb7}</Project>
-      <Name>BuenaHealth.Mobile</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
