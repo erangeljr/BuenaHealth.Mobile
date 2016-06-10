@@ -7,7 +7,9 @@ namespace BuenaHealth.Mobile
 {
     public class App : Application
     {
-        public static BuenaHealthRepository buenaHealthRepository { get; private set; }
+		public const string DB_FILENAME = "buenahealth.db3";
+
+		public static BuenaHealthRepository buenaHealthRepository { get; private set; }
 
         public App(ISQLitePlatform sqlitePlatform, string dbPath)
         {
